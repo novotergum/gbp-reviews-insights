@@ -10,7 +10,7 @@ const ENV = {
 
   PREFILL_API_URL: (process.env.PREFILL_API_URL || "").trim(),
   PREFILL_SECRET: (process.env.PREFILL_SECRET || "").trim(),
-  PUBLIC_APP_URL: (process.env.PUBLIC_APP_URL || "https://smart-reply-generator-production2.up.railway.app").trim(),
+  PUBLIC_APP_URL: (process.env.PUBLIC_APP_URL || "").trim(),
 
  MAKE_TAG_REVIEWS_WEBHOOK_URL: (process.env.MAKE_TAG_REVIEWS_WEBHOOK_URL || "").trim(),
 
