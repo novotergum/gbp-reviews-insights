@@ -103,7 +103,11 @@ const STORE_NAMES = {
   NTST064: "Warendorf",
   NTST065: "Windeck",
   NTST066: "Witten",
-  NTST067: "Wuppertal",
+  NTST067: "Wuppertal",       NTST069: "Hamburg-Sinstorf",
+  // Berg Therapie (Submarke, eigener BGST-Praefix; 2026-06-12 in GBP umbenannt)
+  BGST001: "Erftstadt (Berg Therapie)",
+  BGST002: "Brühl (Berg Therapie)",
+  BGST003: "Bornheim (Berg Therapie)",
 };
 
 // -------------------- Locations ohne NTST-Code: überspringen --------------------
@@ -114,12 +118,11 @@ const SKIP_TITLES = new Set([
 
 // -------------------- Locations ohne NTST-Code: Titel -> Standort --------------------
 const TITLE_NAMES = {
-  "NOVOTERGUM Physiotherapie & Ergotherapie Hamburg-Harburg": "Hamburg-Harburg",
+  "NOVOTERGUM Physiotherapie & Ergotherapie Hamburg-Harburg":  "Hamburg-Sinstorf",
+  "NOVOTERGUM Physiotherapie & Ergotherapie Hamburg-Sinstorf": "Hamburg-Sinstorf",
   "NOVOTERGUM Osteopathie Berlin-Lichtenberg Osteo":          "Berlin-Lichtenberg O",
   "NOVOTERGUM GmbH":                                          "Zentrale",
-  "Berg Therapie - Ganzheitliche Physiotherapie":             "Bornheim (Berg Therapie)",
-  "Berg Therapie - Physiotherapie / Osteopathie & mehr":      "Erftstadt (Berg Therapie)",
-  "Berg Therapie Inh. Christopher Berg":                      "Brühl (Berg Therapie)",
+  // Berg Therapie wird ueber die BGST-Store-Codes in STORE_NAMES aufgeloest
   "minus85GRAD - KRYOTHERAPIE":                               "minus85GRAD",
 };
 

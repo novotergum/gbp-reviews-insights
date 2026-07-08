@@ -14,7 +14,7 @@ Built and used in production by [NOVOTERGUM](https://novotergum.de), a German ph
 | `gbp-reviews-history.js` | manual | One-off backfill of the full review history (all locations, paginated) |
 | `gbp-insights-daily.js` | daily cron | Pulls daily performance metrics (calls, website clicks, direction requests, impressions …) per location |
 | `gbp-insights-weekly.js` | weekly cron | Same metrics aggregated for weekly reporting |
-| `gbp-insights-monthly.js` | monthly cron | Same metrics aggregated for monthly reporting |
+| `gbp-insights-monthly.js` | disabled (2026-07-08) | Same metrics aggregated for monthly reporting — superseded by the OMLocal Monatsreport in `omlocal-scraper`, which pulls mature data on the ~7th |
 | `gbp-tag-reviews.js` | cron | Ships review batches to a webhook for downstream classification/tagging (e.g. an LLM that labels review topics) |
 
 All scripts share the same core: OAuth2 refresh-token flow, automatic retry with exponential backoff on 429/5xx, per-location fan-out with a configurable concurrency pool, and batched webhook delivery.
